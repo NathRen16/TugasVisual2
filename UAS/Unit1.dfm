@@ -354,7 +354,9 @@ object Form1: TForm1
     Database = 'db_sekolah'
     User = 'root'
     Protocol = 'mysql'
-    LibraryLocation = 'D:\VISUAL 2\UAS\libmysql.dll'
+    LibraryLocation = 
+      'C:\rendy\kuliah\semester 4\Visual 2\Tugas Akhir\UAS\UAS\libmysql' +
+      '.dll'
     Left = 4
     Top = 216
   end

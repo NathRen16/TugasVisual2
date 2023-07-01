@@ -63,7 +63,7 @@ var
 
 implementation
 
-uses Unit1;
+uses Unit1, Unit3;
 
 {$R *.dfm}
 
@@ -126,7 +126,9 @@ begin
    ShowMessage('DATA SUDAH ADA DALAM SISTEM');
   end else
   begin
+  end;
 
+ zqry1.SQL.Clear;
  zqry1.SQL.Add('insert into wali_kelas values(null, "' + e_1.Text + '", "' +
       FormatDateTime('yyyy-mm-dd', dtp1.Date) + '", "' + e_2.Text + '", "' +
       e_3.Text + '", "' + cbb3.Text + '", "' + e_4.Text + '", "' +
@@ -138,7 +140,6 @@ begin
  zqry1.Open;
 ShowMessage('DATA BARHASIL DISIMPAN!');
 posisiawal;
-end;
 end;
 procedure TForm2.b3Click(Sender: TObject);
 begin
