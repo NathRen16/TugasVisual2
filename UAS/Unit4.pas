@@ -23,12 +23,12 @@ type
     e_1: TEdit;
     e_2: TEdit;
     e_3: TEdit;
+    con1: TZConnection;
     zqry1: TZQuery;
     ds1: TDataSource;
-    frxdbdtst1: TfrxDBDataset;
+    frxDBDataset4: TfrxDBDataset;
     frxrprt1: TfrxReport;
     zqry2: TZQuery;
-    con1: TZConnection;
     procedure b1Click(Sender: TObject);
     procedure b2Click(Sender: TObject);
     procedure b3Click(Sender: TObject);
@@ -82,7 +82,7 @@ if e_1.Text='' then
     begin
      ShowMessage('TIPE POIN BELUM DIISI DENGAN BENAR');
     end else
-  if Form2.zqry1.Locate(' Nama_poin', e_1.Text, []) then
+  if Form4.zqry1.Locate(' Nama_poin', e_1.Text, []) then
   begin
    ShowMessage('DATA SUDAH ADA DALAM SISTEM');
   end
@@ -131,7 +131,7 @@ begin
 if MessageDlg('APAKAH YAKIN MENGHAPUS DATA INI?',mtWarning,[mbYes,mbNo],0)= mryes then
 begin
 zqry1.SQL.Clear;
-zqry1.SQL.Add(' delete from siswa where Id_poin = "' + Id +'"');
+zqry1.SQL.Add(' delete from poin where Id_poin = "' + Id +'"');
 zqry1. ExecSQL;
 zqry1.SQL.Clear;
 zqry1.SQL.Add('select * from poin');
