@@ -188,6 +188,77 @@ object Form1: TForm1
     TitleFont.Name = 'Tahoma'
     TitleFont.Style = []
     OnCellClick = dbgrd1CellClick
+    Columns = <
+      item
+        Expanded = False
+        FieldName = 'Id_Siswa'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'Nis'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'Nisn'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'Nama_Siswa'
+        Width = 200
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'Nik'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'Tanggal lahir'
+        Width = 100
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'Jenis Kelamin'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'Tingkat Kelas'
+        Width = 100
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'Jurusan'
+        Width = 100
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'Wali kelas'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'Alamat'
+        Width = 200
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'Telp'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'Status'
+        Visible = True
+      end>
   end
   object b1: TButton
     Left = 116
