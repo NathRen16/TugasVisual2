@@ -1,6 +1,6 @@
 object Form8: TForm8
-  Left = 215
-  Top = 133
+  Left = -13
+  Top = 116
   Width = 1162
   Height = 548
   Caption = 'Tabel Orang Tua'
@@ -157,56 +157,56 @@ object Form8: TForm8
       end
       item
         Expanded = False
-        FieldName = 'Nama orangtua'
+        FieldName = 'Nama_orangtua'
         Width = 200
         Visible = True
       end
       item
         Expanded = False
-        FieldName = 'Tanggal lahir'
+        FieldName = 'Tanggal_lahir'
         Width = 100
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'Telp'
-        Width = 100
+        Width = 120
         Visible = True
       end
       item
         Expanded = False
-        FieldName = 'Pendidikan terakhir'
-        Width = 150
+        FieldName = 'Pendidikan_terakhir'
+        Width = 200
         Visible = True
       end
       item
         Expanded = False
-        FieldName = 'Status pekerjaan'
+        FieldName = 'Status_pekerjaan'
         Width = 150
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'Pekerjaan'
-        Width = 200
+        Width = 120
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'Nik_nomorKTP'
-        Width = 100
+        Width = 120
         Visible = True
       end
       item
         Expanded = False
-        FieldName = 'Alamat orgtua'
-        Width = 200
-        Visible = True
-      end
-      item
-        Expanded = False
-        FieldName = 'Status orgtua'
+        FieldName = 'Alamat_orgtua'
         Width = 150
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'Status_orgtua'
+        Width = 140
         Visible = True
       end>
   end

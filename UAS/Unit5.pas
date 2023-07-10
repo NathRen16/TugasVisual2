@@ -39,6 +39,7 @@ type
     procedure bersih;
     procedure dgdbgrd1CellClick(Column: TColumn);
     procedure FormShow(Sender: TObject);
+    procedure dgSiswadbgrd1CellClick(Column: TColumn);
   private
     { Private declarations }
   public
@@ -205,6 +206,25 @@ b3.Enabled:= True;
 b4.Enabled:= True;
 b5.Enabled:= True;
 
+end;
+
+
+
+procedure TForm5.dgSiswadbgrd1CellClick(Column: TColumn);
+begin
+id := zqry1.Fields[0].AsString;
+  e_1.Text := zqry1.Fields[1].AsString;
+  e_2.Text := zqry1.Fields[2].AsString;
+  e_3.Text := zqry1.Fields[3].AsString;
+e_1.Enabled:= True;
+e_2.Enabled:= True;
+e_3.Enabled:= True;
+
+b1.Enabled:= false;
+b2.Enabled:= False;
+b3.Enabled:= True;
+b4.Enabled:= True;
+b5.Enabled:= True;
 end;
 
 end.

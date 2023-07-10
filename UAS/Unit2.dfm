@@ -148,6 +148,7 @@ object Form2: TForm2
     TitleFont.Height = -11
     TitleFont.Name = 'Tahoma'
     TitleFont.Style = []
+    OnCellClick = dgSiswadbgrd1CellClick
     Columns = <
       item
         Expanded = False

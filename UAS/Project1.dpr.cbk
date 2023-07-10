@@ -16,8 +16,8 @@ uses
 
 begin
   Application.Initialize;
-  Application.CreateForm(TForm9, Form9);
   Application.CreateForm(TForm8, Form8);
+  Application.CreateForm(TForm9, Form9);
   Application.CreateForm(TForm7, Form7);
   Application.CreateForm(TForm3, Form3);
   Application.CreateForm(TForm1, Form1);

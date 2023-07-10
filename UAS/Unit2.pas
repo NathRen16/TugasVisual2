@@ -48,10 +48,10 @@ type
     procedure b4Click(Sender: TObject);
     procedure b5Click(Sender: TObject);
     procedure b6Click(Sender: TObject);
-    procedure posisiawal;
     procedure bersih;
-    procedure dbgrd1CellClick(Column: TColumn);
+    procedure posisiawal;
     procedure FormShow(Sender: TObject);
+    procedure dgSiswadbgrd1CellClick(Column: TColumn);
   private
     { Private declarations }
   public
@@ -60,6 +60,7 @@ type
 
 var
   Form2: TForm2;
+   id:string;
 
 implementation
 
@@ -69,7 +70,7 @@ uses Unit1, Unit3;
 
 procedure TForm2.b1Click(Sender: TObject);
 begin
-b1.Enabled:= false;
+  b1.Enabled:= false;
 b2.Enabled:= True;
 b3.Enabled:= False;
 b4.Enabled:= False;
@@ -126,8 +127,6 @@ begin
    ShowMessage('DATA SUDAH ADA DALAM SISTEM');
   end else
   begin
-  end;
-
  zqry1.SQL.Clear;
  zqry1.SQL.Add('insert into wali_kelas values(null, "' + e_1.Text + '", "' +
       FormatDateTime('yyyy-mm-dd', dtp1.Date) + '", "' + e_2.Text + '", "' +
@@ -141,9 +140,10 @@ begin
 ShowMessage('DATA BARHASIL DISIMPAN!');
 posisiawal;
 end;
+end;
 procedure TForm2.b3Click(Sender: TObject);
 begin
-if (e_1.Text = '') or (e_2.Text = '') or (e_3.Text = '') or
+  if (e_1.Text = '') or (e_2.Text = '') or (e_3.Text = '') or
     (e_4.Text = '') or (cbb1.Text = '') or (e_5.Text = '') or
     (e_6.Text = '') or (cbb3.Text = '') then
 begin
@@ -177,7 +177,7 @@ begin
 if MessageDlg('APAKAH YAKIN MENGHAPUS DATA INI?',mtWarning,[mbYes,mbNo],0)= mryes then
 begin
 zqry1.SQL.Clear;
-zqry1.SQL.Add(' delete from siswa where Id_Siswa="'+Id+'"');
+zqry1.SQL.Add(' delete from wali_kelas where Id_wali="'+Id+'"');
 zqry1. ExecSQL;
 zqry1.SQL.Clear;
 zqry1.SQL.Add('select * from wali_kelas');
@@ -247,17 +247,24 @@ cbb3.Enabled:= false;
 e_6.Enabled:= false;
 cbb3.Enabled:= false;
 end;
-procedure TForm2.dbgrd1CellClick(Column: TColumn);
+
+
+procedure TForm2.b6Click(Sender: TObject);
 begin
-id := zqry1.Fields[0].AsString;
-  e_1.Text := zqry1.Fields[1].AsString;
-  e_2.Text := zqry1.Fields[3].AsString;
-  e_3.Text := zqry1.Fields[4].AsString;
-  e_4.Text := zqry1.Fields[6].AsString;
-  cbb1.Text := zqry1.Fields[7].AsString;
-  e_5.Text := zqry1.Fields[8].AsString;
-  e_6.Text := zqry1.Fields[9].AsString;
-  cbb3.Text := zqry1.Fields[5].AsString;
+frxrprt1.ShowReport();
+end;
+
+procedure TForm2.dgSiswadbgrd1CellClick(Column: TColumn);
+begin
+id:= zqry1.Fields[0].AsString;
+e_1.Text := zqry1.Fields[1].AsString;
+e_2.Text := zqry1.Fields[2].AsString;
+e_3.Text := zqry1.Fields[3].AsString;
+e_4.Text := zqry1.Fields[4].AsString;
+cbb1.Text := zqry1.Fields[5].AsString;
+e_5.Text := zqry1.Fields[6].AsString;
+e_6.Text := zqry1.Fields[7].AsString;
+cbb3.Text := zqry1.Fields[8].AsString;
 e_1.Enabled:= True;
 e_2.Enabled:= True;
 e_3.Enabled:= True;
@@ -276,8 +283,4 @@ b4.Enabled:= True;
 b5.Enabled:= True;
 end;
 
-procedure TForm2.b6Click(Sender: TObject);
-begin
-frxrprt1.ShowReport();
-end;
 end.
