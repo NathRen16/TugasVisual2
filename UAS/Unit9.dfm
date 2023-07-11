@@ -1,6 +1,6 @@
 object Form9: TForm9
-  Left = 395
-  Top = 151
+  Left = 278
+  Top = 152
   Width = 928
   Height = 480
   Caption = 'Main Menu'

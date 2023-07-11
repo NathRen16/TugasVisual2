@@ -11,6 +11,7 @@ object Form7: TForm7
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
+  OnShow = FormShow
   PixelsPerInch = 96
   TextHeight = 13
   object I_l2: TLabel
@@ -99,7 +100,7 @@ object Form7: TForm7
   end
   object dgSiswadbgrd1: TDBGrid
     Left = 9
-    Top = 270
+    Top = 262
     Width = 744
     Height = 157
     DataSource = ds1

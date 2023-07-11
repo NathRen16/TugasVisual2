@@ -11,6 +11,7 @@ object Form6: TForm6
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
+  OnShow = FormShow
   PixelsPerInch = 96
   TextHeight = 13
   object I_l2: TLabel
@@ -83,6 +84,7 @@ object Form6: TForm6
     TitleFont.Height = -11
     TitleFont.Name = 'Tahoma'
     TitleFont.Style = []
+    OnCellClick = dgSiswadbgrd1CellClick
     Columns = <
       item
         Expanded = False

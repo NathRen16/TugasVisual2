@@ -11,6 +11,7 @@ object Form5: TForm5
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
+  OnShow = FormShow
   PixelsPerInch = 96
   TextHeight = 13
   object I_l2: TLabel

@@ -1,6 +1,6 @@
 object Form8: TForm8
-  Left = -13
-  Top = 116
+  Left = 24
+  Top = 101
   Width = 1162
   Height = 548
   Caption = 'Tabel Orang Tua'
@@ -11,6 +11,7 @@ object Form8: TForm8
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
+  OnShow = FormShow
   PixelsPerInch = 96
   TextHeight = 13
   object I_l2: TLabel
